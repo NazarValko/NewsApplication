@@ -78,7 +78,7 @@ public class ArticleController extends HttpServlet {
 
 	private void generalNews(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String url = "https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey="+APIkey;
+		String url = "https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey="+APIkey;
 		List<Article> generalNews1 = newsDAO.getListNewsArticles(url);
 		List<Article> generalNews = getFilteredNews(generalNews1);
 		request.setAttribute("generalNews",generalNews);
@@ -91,7 +91,7 @@ public class ArticleController extends HttpServlet {
 	}
 
 	private void scienceNews(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey="+APIkey;
+		String url = "https://newsapi.org/v2/top-headlines?country=us&category=science&apiKey="+APIkey;
 		List<Article> filter = newsDAO.getListNewsArticles(url);
 		List<Article> scienceNews = getFilteredNews(filter);
 		request.setAttribute("scienceNews",scienceNews);
@@ -106,7 +106,7 @@ public class ArticleController extends HttpServlet {
 
 
 	private void healthNews(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey="+APIkey;
+		String url = "https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey="+APIkey;
 		List<Article> filter = newsDAO.getListNewsArticles(url);
 		List<Article> healthNews = getFilteredNews(filter);
 		request.setAttribute("healthNews",healthNews);
@@ -122,7 +122,7 @@ public class ArticleController extends HttpServlet {
 
 	private void businessNews(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String url = "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey="+APIkey;
+		String url = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey="+APIkey;
 		List<Article> filter = newsDAO.getListNewsArticles(url);
 		List<Article> businessNews = getFilteredNews(filter);
 		request.setAttribute("businessNews",businessNews);
@@ -137,7 +137,7 @@ public class ArticleController extends HttpServlet {
 
 	private void entertainmentNews(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String url = "https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey="+APIkey;
+		String url = "https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey="+APIkey;
 		List<Article> filter = newsDAO.getListNewsArticles(url);
 		List<Article> entertainmentNews = getFilteredNews(filter);
 
@@ -152,7 +152,7 @@ public class ArticleController extends HttpServlet {
 
 
 	private void sportsNews(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey="+APIkey;
+		String url = "https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey="+APIkey;
 		
 		List<Article> filter = newsDAO.getListNewsArticles(url);
 		List<Article> sportsNews = getFilteredNews(filter);
@@ -170,7 +170,7 @@ public class ArticleController extends HttpServlet {
 
 	private void technologyNews(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		String url = "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey="+APIkey;
+		String url = "https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey="+APIkey;
 		List<Article> filter = newsDAO.getListNewsArticles(url);
 		List<Article> technologyNews = getFilteredNews(filter);
 
@@ -187,7 +187,7 @@ public class ArticleController extends HttpServlet {
 	private void todaysTopHeadlines(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		//URL For Today's Top Heading In INDIA
-		String url = "http://newsapi.org/v2/top-headlines?country=in&apiKey="+APIkey;
+		String url = "http://newsapi.org/v2/top-headlines?country=us&apiKey="+APIkey;
 		
 		List<Article> listArticlesfilter = newsDAO.getListNewsArticles(url);
 	
